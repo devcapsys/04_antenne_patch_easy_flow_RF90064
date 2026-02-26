@@ -9,10 +9,10 @@ from modules.capsys_serial_instrument_manager.mp730424.multimeter_mp730424 impor
 
 # Initialize global variables
 CURRENT_PATH = os.path.dirname(__file__)
-NAME_GUI = "esay_flow_RF90064"
+NAME_GUI = "easy_flow_RF90064"
 CONFIG_JSON_NAME = "config_antenne_patch_easy_flow_RF90064"
 PRODUCT_LIST_ID_DEFAULT = "4"
-VERSION = "V1.0.2"
+VERSION = "V1.0.3"
 HASH_GIT = "DEBUG" # Will be replaced by the Git hash when compiled with command .\build.bat
 AUTHOR = "Thomas GERARDIN"
 PRINTER_NAME = "EPSON TM-T20III Receipt"
