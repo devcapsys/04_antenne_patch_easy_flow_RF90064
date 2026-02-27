@@ -130,7 +130,6 @@ class Arg:
     host = "127.0.0.1"
     port = "3306"
     database = "capsys_db_bdt"
-    product_list: Optional[dict] = None
     parameters_group: list[str] = []
     external_devices: Optional[list[str]] = None
     script: Optional[str] = None
@@ -213,9 +212,6 @@ class AppConfig:
         return_msg_fail = []
         if self.serial_patch_easy_flow is None:
             return 1, "Erreur : le patch n'est pas initialisé."
-        if self.arg.product_list is None:
-            return 1, "Erreur : la liste de production n'est pas initialisée."
-        log(f"Envoi de la commande : \"{command_to_send}\"", "blue")
         response = self.serial_patch_easy_flow.send_command(command_to_send, timeout=timeout)
         log(f"Réponse du patch : {response}", "blue")
         response = fct(response) if fct else response
